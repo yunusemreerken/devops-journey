@@ -11,14 +11,20 @@ Watches your local Git repositories, reminds you when there are uncommitted chan
 3. Shows `⚡ git` when there are pending changes, `✅ git` when everything is clean
 4. Click to see details — then commit and push without opening a terminal
 5. Set a daily reminder time directly from the menu
+6. Add/remove repos directly from the menu bar (no config file editing)
+7. Create new GitHub repos from the menu bar via GitHub CLI
 
 ## Installation
 
 See the [main README](../README.md#-git-hatirla) for full setup instructions.
 
 ## Configuration
+Open `git-hatirla.1h.sh` and set your API key:
+```bash
+ANTHROPIC_API_KEY="sk-ant-..."
+```
+Repos are managed directly from the menu bar — no need to edit the file manually.
 
-Open `git-hatirla.1h.sh` and edit:
 
 ```bash
 # Add your project folders
@@ -38,3 +44,4 @@ ANTHROPIC_API_KEY="sk-ant-..."
 - `launchd` — scheduled notifications
 - `Anthropic Claude API` — commit message generation
 - `osascript` — macOS native notifications
+- `gh` (GitHub CLI) — new repo creation & push
