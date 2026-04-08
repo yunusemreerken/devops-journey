@@ -10,6 +10,7 @@
 | Tool | Description | Platform |
 |------|-------------|----------|
 | [git-hatirla](./git-hatirla/) | AI-powered Git commit reminder in your macOS menu bar | macOS |
+| [kubernetes-setup-linux-server](./kubernetes-setup-linux-server/) | Install your kubernetes cluster on ubuntu server with one command | Ubuntu |
 | *More coming soon...* | Ticket automation, disk monitoring, health checks | - |
 
 ---
