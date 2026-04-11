@@ -11,6 +11,7 @@
 |------|-------------|----------|
 | [git-hatirla](./git-hatirla/) | AI-powered Git commit reminder in your macOS menu bar | macOS |
 | [kubernetes-setup-linux-server](./kubernetes-setup-linux-server/) | Install your kubernetes cluster on ubuntu server with one command | Ubuntu |
+| [DevOpsTemelliApiBilgisi](./DevOpsTemelliApiBilgisi/) | DevOps Temelli API Bilgisi | - |
 | *More coming soon...* | Ticket automation, disk monitoring, health checks | - |
 
 ---
