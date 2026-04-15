@@ -1,7 +1,7 @@
 ## 📺 Eğitim Videosu
 Projenin detaylı anlatımını aşağıda yer alan YouTube videomdan izleyebilirsiniz:
 
-- [![Linux Başlangıç Eğitimi](https://www.youtube.com/watch?v=JdGClAngZXs&list=PLVwXrJzyvocTIkwZmZKM0Xg9TpBPnHFXf)](https://www.youtube.com/watch?v=JdGClAngZXs&list=PLVwXrJzyvocTIkwZmZKM0Xg9TpBPnHFXf)
+- [[Linux Başlangıç Eğitimi](https://www.youtube.com/watch?v=JdGClAngZXs&list=PLVwXrJzyvocTIkwZmZKM0Xg9TpBPnHFXf)]
 
 *Görsele tıklayarak videoya gidebilirsiniz.*
 
