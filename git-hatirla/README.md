@@ -1,42 +1,50 @@
-# 🔔 git-hatirla
 
-> AI-powered Git commit reminder for your macOS menu bar.
+---
 
-Watches your local Git repositories, reminds you when there are uncommitted changes, and uses Claude AI to write your commit messages automatically.
+## 🧰 git-hatirla
 
-## How it works
+> Never forget to commit again. Lives in your macOS menu bar, watches your repos, and uses Claude AI to write your commit messages.
 
-1. Lives in your macOS menu bar via [xbar](https://xbarapp.com)
-2. Scans your configured repos every hour
-3. Shows `⚡ git` when there are pending changes, `✅ git` when everything is clean
-4. Click to see details — then commit and push without opening a terminal
-5. Set a daily reminder time directly from the menu
-6. Add/remove repos directly from the menu bar (no config file editing)
-7. Create new GitHub repos from the menu bar via GitHub CLI
+### Features
+- ✅ Monitors multiple Git repositories at once
+- 🤖 Auto-generates commit messages using Claude AI (conventional commits format)
+- 🔔 Scheduled daily reminders at a time you choose — set right from the menu bar
+- 🚀 One-click commit + push
 
-## Installation
+### Requirements
+- macOS
+- [xbar](https://xbarapp.com)
+- `bash`, `git`, `curl`, `python3` (all pre-installed on macOS)
+- [Anthropic API key](https://console.anthropic.com)
 
-See the [main README](../README.md#-git-hatirla) for full setup instructions.
+### Installation
 
-## Configuration
-Open `git-hatirla.1h.sh` and set your API key:
+**1. Install xbar**
 ```bash
-ANTHROPIC_API_KEY="sk-ant-..."
+brew install --cask xbar
 ```
-Repos are managed directly from the menu bar — no need to edit the file manually.
 
-
+**2. Copy the plugin**
 ```bash
-# Add your project folders
+cp git-hatirla/git-hatirla.1h.sh ~/Library/Application\ Support/xbar/plugins/
+chmod +x ~/Library/Application\ Support/xbar/plugins/git-hatirla.1h.sh
+```
+
+**3. Configure the script**
+```bash
+open -a TextEdit ~/Library/Application\ Support/xbar/plugins/git-hatirla.1h.sh
+```
+
+Edit these lines:
+```bash
 WATCH_DIRS=(
-  "/Users/yourname/Projects/repo-one"
+  "/Users/yourname/Projects/my-repo"
   "/Users/yourname/Projects/repo-two"
+
 )
 
-# Your Anthropic API key
 ANTHROPIC_API_KEY="sk-ant-..."
 ```
-
 ## Tech
 
 - `bash` — core scripting
@@ -45,3 +53,21 @@ ANTHROPIC_API_KEY="sk-ant-..."
 - `Anthropic Claude API` — commit message generation
 - `osascript` — macOS native notifications
 - `gh` (GitHub CLI) — new repo creation & push
+
+
+
+**4. Refresh xbar**
+
+Click the xbar icon in your menu bar → Refresh All
+
+### Usage
+
+| Menu Item | Action |
+|-----------|--------|
+| `⚡ git` | Pending changes detected |
+| `✅ git` | Everything is clean |
+| `🤖 AI ile Commit At` | Stage all → AI generates message → commit |
+| `🚀 Commit + Push` | Same as above + push to origin |
+| `🔔 Hatırlatma Saati` | Pick a daily reminder time (09:00–22:00) |
+
+---
