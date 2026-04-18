@@ -1,0 +1,24 @@
+provider "aws" {
+  region = "us-east-1"
+  access_key = "test"
+  secret_key = "test"
+  s3_use_path_style = true
+  endpoints {
+    s3         = "http://localhost:4566"
+    dynamodb   = "http://localhost:4566"
+    lambda     = "http://localhost:4566"
+    sts        = "http://localhost:4566"
+    s3control  = "http://localhost:4566"
+    iam        = "http://localhost:4566"
+    logs       = "http://localhost:4566"
+
+  }
+  skip_credentials_validation = true
+  skip_metadata_api_check     = true
+  skip_region_validation      = true
+  skip_requesting_account_id  = true
+}
+
+resource "aws_s3_bucket" "test_bucket" {
+  bucket = "my-test-bucket"
+}   
