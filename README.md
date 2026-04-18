@@ -12,8 +12,8 @@
 | [git-hatirla](./git-hatirla/) | AI-powered Git commit reminder in your macOS menu bar | macOS |
 | [kubernetes-setup-linux-server](./kubernetes-setup-linux-server/) | Install your kubernetes cluster on ubuntu server with one command | Ubuntu |
 | [DevOpsTemelliApiBilgisi](./DevOpsTemelliApiBilgisi/) | DevOps Temelli API Information | - |
-| [elemantary-level-linux](./elementary-level-linux/) | Temel Linux Commands | - Ubuntu Terminal|
-| [aws-practice](./aws-practice/) | LocalStack ile aws kullanımı(free 45 days) | - LocalStack|
+| [elemantary-level-linux](./elementary-level-linux/) | Temel Linux Commands |  Ubuntu Terminal|
+| [aws-practice](./aws-practice/) | Use aws with localstack (free 45 days) |  LocalStack|
 | *More coming soon...* | Ticket automation, disk monitoring, health checks | - |
 
 
