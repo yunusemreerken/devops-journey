@@ -1,22 +1,43 @@
-# AWS LocalStack Demo — S3
+![Terraform](https://img.shields.io/badge/Terraform-1.x-623CE4?logo=terraform)
+![LocalStack](https://img.shields.io/badge/LocalStack-Compatible-1DB954)
+![AWS](https://img.shields.io/badge/AWS-S3%20%7C%20IAM-FF9900?logo=amazon-aws)
 
-Local AWS development environment using Docker + LocalStack.
+# ☁️ AWS Infrastructure as Code — Terraform + LocalStack
 
-## What this project shows
-- Running AWS S3 locally with LocalStack
-- Basic AWS CLI usage without real cloud
+> Real-world Terraform configurations for AWS services, tested locally with LocalStack before going live.
+>
 
-## Requirements
-- Docker
-- AWS CLI
-- LocalStack
+## Quick Start
 
-## Usage
 ```bash
-docker run --rm -d -p 4566:4566 localstack/localstack
-aws --endpoint-url=http://localhost:4566 s3 mb s3://my-test-bucket
-aws --endpoint-url=http://localhost:4566 s3 ls
+# Start LocalStack
+docker run -d -p 4566:4566 localstack/localstack
+
+# Apply Terraform config
+terraform init
+terraform apply -var="env=dev"
 ```
 
-## Screenshot
-[terminal screenshot here]
+**Expected output:**
+```
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+```
+
+
+## Resources Created
+
+| Resource | Description | LocalStack Compatible |
+|----------|-------------|----------------------|
+| `aws_s3_bucket` | Main storage bucket | ✅ |
+| `aws_iam_role` | App execution role | ✅ |
+| `aws_iam_policy` | Least-privilege policy | ✅ |
+
+## Project Structure
+
+```
+aws-practice/
+├── main.tf          # Core resource definitions
+├── variables.tf     # Input variables
+├── outputs.tf       # Useful outputs (bucket ARN, role ARN)
+└── README.md
+```
